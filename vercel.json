@@ -1,9 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "routes": [
-    {
-      "src": "/rand",
-      "dest": "/api/rand.go"
-    }
+    { "src": "^/rand$", "dest": "/api/rand.go" },
+    { "src": "^/ip$", "dest": "/api/ip.go" }
   ]
 }

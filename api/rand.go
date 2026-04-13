@@ -22,7 +22,7 @@ func generatePassword(length int) (string, error) {
 	return string(result), nil
 }
 
-func Handler(w http.ResponseWriter, r *http.Request) {
+func RandHandler(w http.ResponseWriter, r *http.Request) {
 	password, err := generatePassword(40)
 	if err != nil {
 		http.Error(w, "error generating password", http.StatusInternalServerError)
