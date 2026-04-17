@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"apis/internal"
+	"apis/lib"
 	"net"
 	"net/http"
 	"strings"
@@ -32,5 +32,5 @@ func getIP(r *http.Request) string {
 func IPHandler(w http.ResponseWriter, r *http.Request) {
 	ip := getIP(r)
 
-	internal.WriteTextResponse(w, r, ip)
+	lib.WriteTextResponse(w, r, ip)
 }

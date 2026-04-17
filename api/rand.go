@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"apis/internal"
+	"apis/lib"
 	"crypto/rand"
 	"math/big"
 	"net/http"
@@ -40,5 +40,5 @@ func RandHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	internal.WriteTextResponse(w, r, password)
+	lib.WriteTextResponse(w, r, password)
 }
