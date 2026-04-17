@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"go-rand-api/internal"
 	"net"
 	"net/http"
 	"strings"
@@ -31,5 +32,5 @@ func getIP(r *http.Request) string {
 func IPHandler(w http.ResponseWriter, r *http.Request) {
 	ip := getIP(r)
 
-	writeTextResponse(w, r, ip)
+	internal.WriteTextResponse(w, r, ip)
 }

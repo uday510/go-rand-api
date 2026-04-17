@@ -2,6 +2,7 @@ package handler
 
 import (
 	"crypto/rand"
+	"go-rand-api/internal"
 	"math/big"
 	"net/http"
 	"strconv"
@@ -39,5 +40,5 @@ func RandHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	writeTextResponse(w, r, password)
+	internal.WriteTextResponse(w, r, password)
 }

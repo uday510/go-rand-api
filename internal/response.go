@@ -1,8 +1,10 @@
-package handler
+package internal
 
-import "net/http"
+import (
+	"net/http"
+)
 
-func writeTextResponse(w http.ResponseWriter, r *http.Request, body string) {
+func WriteTextResponse(w http.ResponseWriter, r *http.Request, body string) {
 	reqID := FromRequest(r)
 	w.Header().Set("X-Request-Id", reqID)
 
